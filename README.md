@@ -4,7 +4,7 @@
 
 Solo Improvement is a gamified personal development application that transforms your daily habits and goals into an engaging RPG-like experience. Track your progress, unlock achievements, and become the best version of yourself.
 
-🌐 **Live Demo:** [https://solo-improvement.netlify.app](https://solo-improvement.netlify.app)
+🌐 **Live Demo:** [https://solo-improvement.netlify.app](https://gokul-solo-improvement.netlify.app)
 
 ![Solo Improvement Dashboard](https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
