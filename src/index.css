@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply antialiased min-h-screen;
+  background-image: 
+    linear-gradient(to bottom, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.9)),
+    url('https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@layer components {
+  .card {
+    @apply relative overflow-hidden rounded-lg p-5 backdrop-blur-md transition-all duration-300;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(66, 153, 225, 0.1);
+  }
+  
+  .card:hover {
+    @apply shadow-neon border-primary-500/30;
+  }
+  
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-500 text-white;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-500 text-white;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-600 hover:bg-accent-500 text-white;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent hover:bg-white/10 text-white;
+  }
+  
+  .stat-card {
+    @apply card flex flex-col items-center justify-center p-4 text-center;
+  }
+  
+  .stat-value {
+    @apply text-2xl font-bold;
+  }
+  
+  .stat-label {
+    @apply text-xs uppercase tracking-wider text-gray-400;
+  }
+  
+  .nav-link {
+    @apply flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 hover:bg-white/10;
+  }
+  
+  .nav-link.active {
+    @apply bg-primary-600/30 text-primary-300;
+  }
+  
+  .progress-container {
+    @apply w-full h-4 bg-dark-100 rounded-full overflow-hidden;
+  }
+  
+  .progress-bar {
+    @apply h-full rounded-full transition-all duration-500;
+    background: linear-gradient(90deg, theme(colors.primary.600), theme(colors.primary.400));
+  }
+  
+  .heading {
+    @apply font-heading font-bold text-transparent bg-clip-text;
+    background-image: linear-gradient(90deg, theme(colors.primary.300), theme(colors.secondary.300));
+  }
+  
+  .quest-card {
+    @apply card mb-3;
+  }
+  
+  .skill-node {
+    @apply relative w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300;
+    background: rgba(15, 23, 42, 0.8);
+    border: 2px solid rgba(66, 153, 225, 0.3);
+  }
+  
+  .skill-node.unlocked {
+    @apply shadow-neon border-primary-400;
+  }
+  
+  .skill-node.locked {
+    @apply grayscale cursor-not-allowed;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

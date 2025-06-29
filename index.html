@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solo Improvement | Level Up Your Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      .disclaimer-modal {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex; align-items: center; justify-content: center;
+        z-index: 9999;
+      }
+      .disclaimer-box {
+        background: #1f1f1f;
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 500px;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      }
+      .disclaimer-box button {
+        margin-top: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        background-color: #4ade80;
+        color: #000;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .disclaimer-box a {
+        color: #4ade80;
+        text-decoration: none;
+      }
+      .disclaimer-box a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-400 text-white">
+    <div id="root"></div>
+
+    <div class="disclaimer-modal" id="disclaimerModal">
+      <div class="disclaimer-box">
+        <h2>⚠️ Disclaimer</h2>
+        <p>This project was developed by <strong>Gokul</strong> as a personal initiative.<br>
+        It is still under development, so there might be bugs or incomplete features.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+          If you encounter any bugs or have queries, please send them to:<br>
+          <a href="mailto:gokuljayakumar89@gmail.com">gokuljayakumar89@gmail.com</a>
+        </p>
+        <button onclick="document.getElementById('disclaimerModal').style.display = 'none'">Got it!</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
